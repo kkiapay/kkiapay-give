@@ -1,0 +1,81 @@
+# Copyright (C) 2019 Kkipay Developer Team ❤️
+# This file is distributed under the GPLv2.
+msgid ""
+msgstr ""
+"Project-Id-Version: KKiapay Give Plugin 1.0.1\n"
+"Report-Msgid-Bugs-To: "
+"https://wordpress.org/support/plugin/kkiapay-give\n"
+"POT-Creation-Date: 2019-02-24 11:06:58+00:00\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"PO-Revision-Date: 2019-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"X-Generator: node-wp-i18n 1.2.3\n"
+
+#: kkiapay-give-class.php:146
+msgid "Public KEY"
+msgstr "Clé publique"
+
+#: kkiapay-give-class.php:155
+msgid "Private KEY"
+msgstr "Clé Privée"
+
+#: kkiapay-give-class.php:163
+msgid "Secret"
+msgstr "Secret"
+
+#: kkiapay-give-class.php:171
+msgid "(Optional) Widget Position"
+msgstr "(Optionnel) Disposition du Widget Kkiapay"
+
+#: kkiapay-give-class.php:173
+msgid ""
+"When Kkiapay payment form is displayed directly on your site, you can choose "
+"the widget displaying position (left side, right side or center). "
+msgstr ""
+"Utilisez cette option pour contrôler l'endroit où la fenêtre Kkiapay devrait "
+"s'afficher sur votre site"
+
+#: kkiapay-give-class.php:178
+msgid "Right Side"
+msgstr "Du côté droit de la page"
+
+#: kkiapay-give-class.php:179
+msgid "Left Side"
+msgstr "Du côté gauche de la page"
+
+#: kkiapay-give-class.php:180
+msgid "Center"
+msgstr "Au centre de la page"
+
+#: kkiapay-give-class.php:200
+msgid "(Optional) Widget Theme"
+msgstr "(Optionnel) Thème du widget"
+
+#: kkiapay-give-class.php:204
+msgid ""
+"When Kkiapay payment form is displayed directly on your site, you can choose "
+"the widget color (eg: red) according to your website colors. "
+msgstr ""
+"Paramétrez la couleur de la fenêtre Kkiapay. Pour une meilleure "
+"harmonisation, utilisez la couleur dominante de votre site ou laissez vide "
+"(Recommandée)."
+
+
+#: kkiapay-give-class.php:186
+msgid ""
+"Enter the URL to a 128x128px image of your brand or product. e.g. "
+"<code>https://yoursite.com/wp-content/uploads/2013/09/yourimage.jpg</code>"
+msgstr ""
+"Entrer l'URL d'une image de taille 128x128px de votre produit ou marque, "
+"exemple <code>https://monsite.com/wp-content/uploads/2013/09/monimage.jpg</"
+"code>"
+
+
+
+
+
+
+
