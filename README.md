@@ -1,6 +1,5 @@
 ## Kkiapay-Give
 
-[![Build Status](https://travis-ci.org/kkiapay/wordpress-plugin.svg?branch=master)](https://travis-ci.org/kkiapay/wordpress-plugin)
 
 Kkiapay-Give is a plugin developed by the company kkiapay to receive donations on your wordpress site
 
