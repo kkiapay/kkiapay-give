@@ -25,7 +25,8 @@ window.addEventListener( 'load', ( evt ) => {
                     theme: theme_kkiapay,
                     url: url_kkiapay,
                     position,
-                    reason:'donation'
+                    reason:'donation',
+		    sdk:'give'
                 })
 			}else if(onsubmit){
                 onsubmit.call(this,evt);
