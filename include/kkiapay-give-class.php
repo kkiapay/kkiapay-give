@@ -27,7 +27,7 @@ class Kkiapay_Give {
         'theme_kkiapay' => give_get_option('theme_kkiapay'),
         'url_kkiapay' => give_get_option('url_kkiapay'),
         'website_url' => get_site_url(),
-        'key' => give_get_option('test_mode') == 'disabled' ? give_get_option('public_key_kkiapay') : give_get_option('public_key_kkiapay_test'),
+        'key' => give_get_option('public_key_kkiapay'),
         'sandbox' => give_is_test_mode() ? 'true' : 'false'
       ];
 
@@ -43,15 +43,12 @@ class Kkiapay_Give {
 
   public function import_kkiapay()
   {
-      $filename='kkiapay-give.php';
-      $path=plugin_dir_path(__DIR__).$filename;
-      $key = give_get_option('test_mode') == 'disabled' ? give_get_option('public_key_kkiapay') : give_get_option('public_key_kkiapay_test');
       if (give_is_test_mode()) {
         $sandbox = true;
       } else {
         $sandbox = false;
       }
-      $this->kkiapay = new Kkiapay($key,give_get_option('private_key_kkiapay'),give_get_option('secret_key_kkiapay'),$sandbox);
+      $this->kkiapay = new Kkiapay(give_get_option('public_key_kkiapay'),give_get_option('private_key_kkiapay'),give_get_option('secret_key_kkiapay'),$sandbox);
   }
   
   public function register_gateway($gateways){
