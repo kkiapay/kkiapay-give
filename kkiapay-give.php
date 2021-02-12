@@ -38,16 +38,22 @@ function kkiapay_give_load_plugin_textdomain() {
     load_plugin_textdomain( 'kkiapay-give', FALSE, basename( dirname( __FILE__ ) ) . '/languages/' );
 }
 
-//check plugin version for compatibility
-$filename='give/give.php';
-$path=plugin_dir_path(__DIR__).$filename;
-$plugin_information = get_plugin_data($path);
-if (is_plugin_active('give/give.php') && version_compare($plugin_information['Version'], '2.5.2', '>=')==true) {
-    require_once(plugin_dir_path(__FILE__) . 'include/kkiapay-give-class.php');
-    add_action( 'plugins_loaded', 'kkiapay_give_load_plugin_textdomain' );
-    new Kkiapay_Give();
-}
-else {
-    add_action( 'admin_notices', 'invalid_version_notice' );
-}
 
+add_action('init','init_plugin');
+
+
+
+function init_plugin(){
+    $filename='give/give.php';
+    $path=plugin_dir_path(__DIR__).$filename;
+    $plugin_information = get_plugin_data($path);
+    if (is_plugin_active('give/give.php') && version_compare($plugin_information['Version'], '2.5.2', '>=')==true) {
+        require_once(plugin_dir_path(__FILE__) . 'include/kkiapay-give-class.php');
+        add_action( 'plugins_loaded', 'kkiapay_give_load_plugin_textdomain' );
+        new Kkiapay_Give();
+    }
+    else {
+        add_action( 'admin_notices', 'invalid_version_notice' );
+    }
+
+}
