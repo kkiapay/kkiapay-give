@@ -38,12 +38,12 @@ function kkiapay_give_load_plugin_textdomain() {
     load_plugin_textdomain( 'kkiapay-give', FALSE, basename( dirname( __FILE__ ) ) . '/languages/' );
 }
 
-
 add_action('init','init_plugin');
 
 
 
 function init_plugin(){
+
     $filename='give/give.php';
     $path=plugin_dir_path(__DIR__).$filename;
     $plugin_information = get_plugin_data($path);
@@ -57,3 +57,6 @@ function init_plugin(){
     }
 
 }
+
+
+
