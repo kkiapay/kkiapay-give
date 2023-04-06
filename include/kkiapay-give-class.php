@@ -107,7 +107,17 @@ class Kkiapay_Give {
 
   function give_kkiapay_currency($currencies)
   {
-      $currencies['XOF'] = 'Fcfa';
+      // $currencies['XOF'] = 'Fcfa';
+      $currencies['XOF'] = [
+        'admin_label' => 'Fcfa',
+        "symbol" => 'XOF',
+        "setting" => [
+          'currency_position' => 'after',
+          "thousands_separator" =>" ",
+          "decimal_separator"=>",",
+          "number_decimals"=>0
+        ]
+      ];
       return $currencies;
   }
 
