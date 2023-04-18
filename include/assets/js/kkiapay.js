@@ -19,6 +19,7 @@ window.addEventListener("load", (evt) => {
           .getAttribute("data-total");
         let firstname = document.getElementsByName("give_first")[0].value;
         let lastname = document.getElementsByName("give_last")[0].value;
+        let email = document.getElementsByName('give_email')[0].value;
         let {
           key,
           theme_kkiapay,
@@ -31,6 +32,7 @@ window.addEventListener("load", (evt) => {
         openKkiapayWidget({
           amount: parseInt(amount),
           name: `${firstname} ${lastname}`,
+          email,
           key,
           sandbox,
           theme: theme_kkiapay,
