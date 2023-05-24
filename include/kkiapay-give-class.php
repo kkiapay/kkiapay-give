@@ -21,12 +21,11 @@ class Kkiapay_Give {
     
 
       Give_Scripts::register_script( 'give-kkiapay-checkout-js',  plugins_url('../include/assets/js/kkiapay.js', __FILE__));
-
+      
       $kkiapay_vars =[
-        'position_kkiapay' => give_get_option('position_kkiapay'),
-        'theme_kkiapay' => give_get_option('theme_kkiapay'),
-        'url_kkiapay' => give_get_option('url_kkiapay'),
-        'website_url' => get_site_url(),
+        'position' => give_get_option('position_kkiapay'),
+        'paymentmethod' => give_get_option('payment_method_kkiapay'),
+        'theme' => give_get_option('theme_kkiapay'),
         'key' => give_get_option('public_key_kkiapay'),
         'sandbox' => give_is_test_mode() ? 'true' : 'false'
       ];
@@ -175,6 +174,20 @@ class Kkiapay_Give {
       );
 
       $settings[] = array(
+        'title' => __('(Optionnel) Moyens de paiement', 'kkiapay-give'),
+        'description' => __("Définissez les moyens de paiement que vous choisissez de prendre en charge.", 'kkiapay-give'),
+        'type' => 'select',
+        'default' => 'all',
+        'desc_tip'    => true,
+        'id' => 'payment_method_kkiapay',
+        'options' => array(
+            'all' => (__('Tout', 'kkiapay-give')),
+            'momo' => (__('Mobile Money', 'kkiapay-give')),
+            'card' => (__('Cartes Bancaires', 'kkiapay-give'))
+        )
+        );
+
+      $settings[] = array(
         'title' => __('(Optionnel) Disposition du Widget Kkiapay', 'kkiapay-give'),
         'type' => 'select',
         'description' => __("Utilisez cette option pour contrôler l'endroit où la fenêtre Kkiapay devrait s'afficher sur votre site", 'kkiapay-give'),
@@ -187,20 +200,6 @@ class Kkiapay_Give {
             'center' => (__('Au centre de la page', 'kkiapay-give'))
         )
         );
-
-      $settings[] = array(
-        'name'          => __( 'Kkiapay checkout image', 'kkiapay-give' ),
-        'desc'          => __( "Entrer l'URL d'une image de taille 128x128px de votre produit ou marque", 'kkiapay-give' ),
-        'id'            => 'url_kkiapay',
-        'wrapper_class' => 'kkiapay-checkout-field ',
-        'type'          => 'file',
-        'options'       => array(
-          'url' => false, 
-        ),
-        'text'          => array(
-          'add_upload_file_text' => __( 'Add or Upload Image', 'kkiapay-give' ),
-        ),
-      );
 
       $settings[] = array(
         'row' =>true,
