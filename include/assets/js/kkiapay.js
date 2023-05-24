@@ -19,15 +19,9 @@ window.addEventListener("load", (evt) => {
           .getAttribute("data-total");
         let firstname = document.getElementsByName("give_first")[0].value;
         let lastname = document.getElementsByName("give_last")[0].value;
-        let email = document.getElementsByName('give_email')[0].value;
-        let {
-          key,
-          theme_kkiapay,
-          url_kkiapay,
-          website_url,
-          sandbox,
-          position_kkiapay,
-        } = give_kkiapay_vars;
+        let email = document.getElementsByName("give_email")[0].value;
+        let { key, theme, sandbox, position, paymentmethod } =
+          give_kkiapay_vars;
 
         openKkiapayWidget({
           amount: parseInt(amount),
@@ -35,9 +29,9 @@ window.addEventListener("load", (evt) => {
           email,
           key,
           sandbox,
-          theme: theme_kkiapay,
-          url: url_kkiapay,
-          position: position_kkiapay,
+          theme,
+          position,
+          paymentmethod: [paymentmethod],
           reason: "donation",
           sdk: "give",
         });
@@ -48,7 +42,6 @@ window.addEventListener("load", (evt) => {
 
     var script = document.createElement("script");
     script.onload = function () {
-      // console.log('le script de kkiapay vient de se chargé')
       addSuccessListener((response) => {
         var input = document.createElement("input");
         input.setAttribute("type", "hidden");
