@@ -1,14 +1,17 @@
-## Kkiapay-Give
+## Kkiapay
 
+KkiaPay allows businesses to safely receive payments by mobile money, credit card and bank account.
 
-Kkiapay-Give is a plugin developed by the company kkiapay to receive donations on your wordpress site
+Kkiapay is developer friendly solution that allows you to accept mobile money and credit card, and direct bank payments in your application or website. Before using this plugin, make sure you have a right Merchant Account on Kkiapay, otherwise go and create your account. It is free and without pain.
 
 KKIAPAY is available in:
 
 * Benin
-* Senegal [WIP]
+* Côte d'Ivoire
+* Togo
+* Senegal
 * [More details at ](https://kkiapay.me/features/supported-countries)
 
-## Warning
+## Installation
 
-Please specify your public API key taking into account whether Give is in Test mode or not
+Please refer to : https://wordpress.org/plugins/kkiapay-give-plugin
