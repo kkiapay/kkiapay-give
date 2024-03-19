@@ -29,9 +29,6 @@ if (!defined('WPINC')) {
  */
 define('GIVEWP_KKIAPAY_VERSION', '1.0.0');
 
-// include_once(ABSPATH . 'wp-admin/includes/plugin.php');
-// require_once(plugin_dir_path(__DIR__) . 'give-kkiapay/vendor/autoload.php');
-
 function invalid_version_notice()
 {
 
@@ -46,7 +43,7 @@ function invalid_version_notice()
 require_once(ABSPATH . '/wp-content/plugins/give/give.php');
 
 //@Todo
-require_once(plugin_dir_path(__FILE__) . 'include/admin/kkiapay-give-admin.php');
+require_once(plugin_dir_path(__FILE__) . 'includes/admin/kkiapay-give-admin.php');
 /**
  * Load tanslation files
  */
@@ -71,11 +68,12 @@ function init_plugin()
         return;
 
     // Make the installed Give version is more than 2.5.1 is active
-    if (version_compare($plugin_information['Version'], '2.5.2', '>=') == true) {
+    if (version_compare($plugin_information['Version'], '2.5.2', '>=') == false) {
         add_action('admin_notices', 'invalid_version_notice');
         return;
     }
-    require_once(plugin_dir_path(__FILE__) . 'include/kkiapay-give-class.php');
+
+    require_once(plugin_dir_path(__FILE__) . 'includes/class-give-kkiapay.php');
     add_action('plugins_loaded', 'kkiapay_give_load_plugin_textdomain');
     new Kkiapay_Give();
 }
