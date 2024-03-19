@@ -14,4 +14,4 @@ KKIAPAY is available in:
 
 ## Installation
 
-Please refer to : https://wordpress.org/plugins/kkiapay-give-plugin
+Please refer to : https://wordpress.org/plugins/kkiapay-for-give

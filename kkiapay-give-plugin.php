@@ -2,7 +2,7 @@
 
 /**
  * Plugin Name: KKiapay For Give 
- * Plugin URI: https://wordpress.org/plugins/kkiapay-give-plugin
+ * Plugin URI: https://wordpress.org/plugins/kkiapay-for-give
  * Description: KKiapay Give est une exension permettant de recevoir des dons par mobile money, carte de crédit et compte bancaire en toute sécurité
  * Author: Kkipay Developer Team ❤️
  * Author URI: https://kkiapay.me/
