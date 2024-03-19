@@ -65,7 +65,7 @@ class KkiapayGateway
             $reponse_body = wp_remote_retrieve_body($response);
             return json_decode((string)$reponse_body);
         }
-        $reponse_body = json_encode(array("status" => STATUS::TRANSACTION_NOT_FOUND));
+        $reponse_body = wp_json_encode(array("status" => STATUS::TRANSACTION_NOT_FOUND));
 
         return json_decode((string)$reponse_body);
     }

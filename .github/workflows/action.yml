@@ -1,0 +1,25 @@
+name: Deploy kkiapay give plugin
+
+on:
+  push:
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
+env:
+  SVN_REPOSITORY: "https://plugins.svn.wordpress.org/kkiapay-give"
+  SVN_PASSWORD: ${{ secrets.SVN_PASSWORD }}
+  SVN_USERNAME: ${{ secrets.SVN_USERNAME }}
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+
+    - name: change file permissions
+      run: chmod +x ./deploy/deploy.sh
+      
+    - name: run deploy shell script
+      run: ./deploy/deploy.sh

@@ -66,7 +66,7 @@ class Kkiapay_Give
       add_action('give_admin_field_my_custom_subtitle', 'my_custom_subtitle', 10, 5);
     }
 
-    Give_Scripts::register_script('give-kkiapay-checkout-js',  plugins_url('../includes/assets/js/kkiapay.js', __FILE__));
+    Give_Scripts::register_script('give-kkiapay-checkout-js',  plugins_url('../includes/assets/js/kkiapay.js', __FILE__), GIVEWP_KKIAPAY_VERSION);
 
     $kkiapay_vars = [
       'position' => give_get_option('position_kkiapay'),
@@ -76,9 +76,9 @@ class Kkiapay_Give
       'sandbox' => give_is_test_mode() ? 'true' : 'false'
     ];
 
-    Give_Scripts::register_script('give-kkiapay-popup-js', plugins_url('../includes/assets/js/kkiapay.js', __FILE__));
+    Give_Scripts::register_script('give-kkiapay-popup-js', plugins_url('../includes/assets/js/kkiapay.js', __FILE__), [], GIVEWP_KKIAPAY_VERSION);
     wp_enqueue_script('give-kkiapay-popup-js');
-    wp_localize_script('give-kkiapay-popup-js', 'give_kkiapay_vars', $kkiapay_vars);
+    wp_localize_script('give-kkiapay-popup-js', 'give_kkiapay_vars', $kkiapay_vars, GIVEWP_KKIAPAY_VERSION);
   }
 
 

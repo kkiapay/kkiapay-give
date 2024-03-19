@@ -103,11 +103,11 @@ async function a() {
 
 a()
     .then(() => {
-        const zipName = `kkiapay-give_v${PLUGIN_VERSION}.zip`
+        // const zipName = `kkiapay-give_v${PLUGIN_VERSION}.zip`
+        const zipName = `kkiapay-give.zip`
         zip(folderPath, path.join(__dirname, '..', zipName)).then(() => {
             deleteFolderRecursive(folderPath)
             console.log("Your zip is here", path.join(__dirname, '..', zipName));
         })
 
     })
-

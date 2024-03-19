@@ -1,13 +1,13 @@
 <?php
 
 /**
- * Plugin Name: KKiapay Give Plugin
+ * Plugin Name: KKiapay For Give 
  * Plugin URI: https://wordpress.org/plugins/kkiapay-give-plugin
  * Description: KKiapay Give est une exension permettant de recevoir des dons par mobile money, carte de crédit et compte bancaire en toute sécurité
  * Author: Kkipay Developer Team ❤️
  * Author URI: https://kkiapay.me/
- * License: GPLv2
- * Version: 1.0.0
+ * License: GPLv3
+ * Version: 0.1.0
  * Requires at least: 6.0
  * Tested up to: 6.4.3
  * WC requires at least: 6.0
@@ -27,14 +27,14 @@ if (!defined('WPINC')) {
  * Start at version 1.0.0 and use SemVer - https://semver.org
  * Rename this for your plugin and update it as you release new versions.
  */
-define('GIVEWP_KKIAPAY_VERSION', '1.0.0');
+define('GIVEWP_KKIAPAY_VERSION', '0.1.0');
 
 function invalid_version_notice()
 {
 
 ?>
     <div class="error notice">
-        <p><?= 'Veuillez installez une version de give superieur ou egale a la 2.5.2' ?></p>
+        <p><?php echo 'Veuillez installez une version de give superieur ou egale a la 2.5.2' ?></p>
     </div>
 <?php
 }
@@ -49,7 +49,7 @@ require_once(plugin_dir_path(__FILE__) . 'includes/admin/kkiapay-give-admin.php'
  */
 function kkiapay_give_load_plugin_textdomain()
 {
-    load_plugin_textdomain('kkiapay-give', FALSE, basename(dirname(__FILE__)) . '/languages/');
+    load_plugin_textdomain('kkiapay-give', false, basename(dirname(__FILE__)) . '/languages/');
 }
 
 add_action('init', 'init_plugin');
